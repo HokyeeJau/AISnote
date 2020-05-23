@@ -1,0 +1,253 @@
+ACL-IJCAI-SIGIR顶级会议论文报告会(AIS2020)
+
+ACL
+车万翔，哈尔滨工业大学
+文章标题：翻译 生成 对话 神经网络 机器学习 
+文章作者：中国人比重大
+
+各领域竞赛图
+2019年（571）：
+Dialogue
+Machine Learning
+Information Extraction and Text Mining
+Resources and Evaluation
+Generation
+Machine Translation
+Question Answering
+Tagging Chunking Syntax and Parsing
+Textual Inferences and Other Areas of Semantics
+Sentence Level Semantics
+
+1. 人机对话：
+- 研究意义明确，应用价值巨大
+	- 通过图灵测试
+	- 新的人机交互模式
+- 曾经主要在语音领域进行研究
+	- 随着语音识别的突破，逐渐被重视
+- 研究重点
+	- 任务型对话：NLU, DM, NLG
+	- 开放域对话：端到端
+- 研究趋势
+	- 任务型对话：端到端
+	- 开放域对话：引入更多知识和步骤
+
+Virtual Assistant:
+-> Websites
+-> Search Engines
+-> Mobile Apps
+
+2. 机器学习
+- 预训练模型层层出不穷
+	- 新的预训练任务：SPECTER
+	- 模型压缩和加速：MobileBERT
+- 减轻过拟合问题
+	- 调整精调策略：SMART
+- 对Transformer的分析和改进
+	- 新的连接方式：Highway Transformer，Reordering Sublayeres
+- 对抗训练提升模型的鲁棒性
+	- 对抗拼写错误：RobEn
+总结：大一统解决各种NLP问题：GLUE, CLUE, XGLUE, XTREME(不止解决一个任务)
+
+3. 文本生成
+深度学习使“无中生有”成为可能
+与对话、文摘、机器翻译等关系紧密
+研究热点
+- VAE vs. Pre-training
+	- PPVAE, Coupled-VAE
+	- BART
+- None-autoregressive vs. Autoregressive
+	- CoMMA
+	- PMLM
+- 基于句法
+	- Syn-QG, Paraphrase Generation, Systematic Assessment
+
+4. 问答系统
+数据集推动研究的典型代表
+模型逐渐被预训练模型统一
+研究任务组建分散
+- 对话式文化：DoQA
+- 长文档问答：GAN、Recurrent Chunking
+- 多步推理：Unsupervised Alignment
+- 跨语言、多模态：MLQA、TVQA+
+- 融入知识图谱：WinoWhy
+- 问题生成
+
+5. 新任务和资源挑战机器
+- 任务和资源
+	- 受SQuAD鼓舞新任务和资源层出不穷
+	- 但是很快这些任务被预训练模型横扫
+	- 必须提出新的任务和资源提高难度
+		- 句子级完形填空：SCDE
+- 评价方法
+	- 文本生成类任务的评价
+		- 使用BERT和人学习：BLEURT
+
+6. 机器翻译
+衰落原因：
+- 模型逐渐被Transformer统一
+- 研究任务逐渐分散：
+端到端语音翻译、多领域、多模态、多语言、对抗样本、无指导、预训练、Back-Translation、非自回归
+
+7. 句法分析逐渐式微
+Biaffine Parser表明结构学习不重要
+预训练模型中蕴含句法信息：
+- 可以有效帮助提高句法分析的效果
+- 下游任务无需显式的句法结构帮助
+研究热点：
+- 探针分析：多语言BERT蕴含普世的句法信息：mBERT Probing
+- 句法分析的应用：文本生成、增强语言模型：Syntactic for LM
+- 核心算法：结构学习依然可以帮助句法分析：Second-Order TreeCRF
+
+8. 语义分析
+词级别语义昙花一现：
+- Word2Vec的成功启发了一大批工作
+- 具有一词多义的固有缺陷
+- 研究热点转向动态词向量（预训练）
+句级别语义无规律；
+- 语义本身的定义比较模糊
+	- 符号语义：AMR、CCG、DRTS、Text-to-SQL等
+	- 分布式语义
+
+9. 其他维度
+- 多语言：*+lingual
+	- Cross-lingual, Multilingual, Bilingual, Monolingual
+- 多模态：*+modal、visual、image
+	- Cross-modal, multi-modal, multimodal
+- 融入知识：Knowledge
+	- Knowledge Graph, Commonsense Knowledge
+- 多领域：Domain
+	- Multi-Domain, Cross-Domain, Domain Adaption, Domain Shift
+- 图神经网络：Graph+Network
+	- Attention, Convolutional,  Neural Memory, Module
+- 低资源、小样本、零样本
+	- Low-Resource, Few-shot, Zero-shot
+
+IJCAI
+JIA JIA 清华大学
+
+Overall Statistics
+- 82 papers about NLP
+- Deep Learning Dominant
+- Generation
+- Attention
+- Entity
+- Knowledge
+
+Algorithms:
+Unsupervised Pretraining
+Multilingual Learning
+Meta Learning and Few Shot Learning
+Transfer Learning
+Bias in NLP
+Knowledge Fusion
+Tasks:
+Question Answering
+Natural Language Generation
+Multi-Modal
+
+1. Unsupervised Pretraining
+Universal Pretraining
+- EViLBERT(未共享)，多模态语言训练模型
+- AdaBERT，NAS网络结构搜索，参数量大
+Task-Oriented Pretraining
+- BERT-INT（知识图谱）
+- BERT-PLI（法律搜索）
+- FinBERT（金融探索）
+围绕BERT的发展，有两个方面的进展，加快无监督学习，减少时间开销
+
+2. Multilingual Learning
+- Unsupervised Multilingual
+	- UniTrans
+	- Unsupervised Domain Adaption
+- Supervised Multilingual
+	- Bilingual Paraphrase Generation
+	- Multilingual Word Sense Disambiguation
+- 7 Machine Translation Papers
+
+3. Meta Learning and Few Shot Learning
+- Meta-Learning
+	- QA via Meta-Learning
+- Few Shot Learning
+	- Zero-Shot Text Classification for ICD Coding
+	- Zero-Shot in Cross Lingual
+
+4. Transfer Learning
+- Pretrain & Fine Tune
+- Transfer Learning Framework
+	- Knowledge Transfer for Reading-Comprehension
+	- Text Style Transfer
+- Domain Adaption
+	- Cross Lingual Domain Adaption
+	- Semantic Parsing Domain Adaption
+
+5. Bias in NLP
+- Stereotype in Domain
+- Gender Bias
+- Racial Bias
+- Guarantee Fairness in NLP
+	- Word Embedding Fairness Evaluation(测试word embedding是否fair)
+	- Metamorphic Testing for Fairness in NLP Model（对Fair进行测试）
+
+6. Knowledge Fusion
+- 9 Papers about Knowledge
+- Enhance Performance with Knowledge
+	- Reading Comprehension
+	- Question Answering
+	- Event Casuality Idnetificaiton
+	- Neural Machine Translation
+	- Dialogue Generation
+- Generate New Knowledge
+	- Mucko: Knowledge Reasoning（跨模态)
+	- BERT-INT: Knowledge Graph Alignment
+	- TransOMCS（如何生成尝试性的知识）
+
+7. Question Answering
+- Simple QA to Complex QA(融入推理和常识)
+- Simple QA: Matching
+- Complex QA: Reasoning Multi-Hop, Commonsense
+- 3 papers about Knowledge and QA
+- 2 papers about Reason and QA
+- 2 papers about Multitask and QA
+
+8. Natural Language Generation
+- 12 papaers on NLG
+- NLG on different Domains
+	- Dialogue Generation
+	- Paraphrase Generation
+	- Response Generation
+	- Comments Generation
+	- Legal-Text Generation
+- Universal NLG Framework
+	- NLG and Pretrain Model（预训练和NLG的结合）
+	- Generation from Structured Data
+- Evaluate Generation Quality
+	- Traditional NLG
+
+9. Multi-Modal
+- 7 papers about Multi-Modality
+- 4 papers on Visual Question Answering(VQA)
+	- Knowledge Reasoning 自监督、网络设计……
+	- Self Supervise 
+	- Architecture Design
+- Video-Text Retrieval 通过视频补充文本
+- Vision-Language Navigation
+- Universal Pretrain Model
+
+SIGIR
+Yanyan lan 中科院
+Deep Learning大范围应用
+
+Conclusions from Word Cloud
+Traditional IR tasks: Recommendation, Search, Attention
+Neural IR since 2016: Neural, Representation, Graph, Attention
+Popular Techniques Applied in IR: Adversarial, Transformer
+Divers Applications: Generation, Conversation, Multi Domain
+
+Best Paper: SIGIR关注成熟的技术
+
+How to get papers accepted by SIGIR:
+- all topics related to broad IR is welcome!
+- 10 pages
+- Solid Experiments!!
+- New applications, cross domain studies, human study
+- ML problems applied to IR: Bias, Fairness, Interpretability
